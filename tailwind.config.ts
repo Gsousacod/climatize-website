@@ -11,8 +11,15 @@ const config: Config = {
           lightBlue: "#EAF7FF",
           white: "#FBFBFB",
           gray: "#334155",
-          softGray: "#F1F5F9"
+          softGray: "#F1F5F9",
+          accent: "#F59E0B",
+          accentDark: "#B45309",
+          accentLight: "#FEF3C7"
         }
+      },
+      fontFamily: {
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"]
       },
       boxShadow: {
         premium: "0 24px 80px rgba(7, 94, 145, 0.16)",

@@ -27,13 +27,13 @@ export function ContactForm() {
             title="Solicite uma avaliação técnica"
             description="Envie sua necessidade de manutenção, instalação, higienização ou PMOC. O formulário está organizado para futura integração com backend."
           />
-          <div className="mt-8 rounded-md bg-climatize-lightBlue p-6">
-            <p className="font-bold text-slate-950">Atendimento em {company.city} - {company.state}</p>
+          <div className="mt-8 rounded-2xl bg-climatize-lightBlue p-6">
+            <p className="font-heading font-bold text-slate-950">Atendimento em {company.city} - {company.state}</p>
             <p className="mt-2 leading-7 text-slate-600">Atendimento voltado para empresas, comércios, clínicas, hospitais, hotéis e instituições que precisam de suporte técnico confiável.</p>
           </div>
         </div>
 
-        <motion.form onSubmit={handleSubmit} variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="grid gap-4 rounded-md border border-slate-100 bg-climatize-softGray p-6 shadow-soft sm:grid-cols-2">
+        <motion.form onSubmit={handleSubmit} variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewport} className="grid gap-4 rounded-2xl border border-slate-100 bg-climatize-softGray p-6 shadow-soft sm:grid-cols-2">
           <label className="grid gap-2 text-sm font-semibold text-slate-700">
             Nome
             <input required name="name" className="rounded-md border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-climatize-blue focus:ring-4 focus:ring-climatize-blue/10" />

@@ -13,7 +13,7 @@ export function Footer() {
               <Image src={company.logo} alt="Logo da Climatize Soluções em Ar Condicionado" width={48} height={48} className="h-full w-full object-contain" />
             </span>
             <div>
-              <p className="font-bold">{company.name}</p>
+              <p className="font-heading font-bold">{company.name}</p>
               <p className="text-sm text-blue-100">{company.city} - {company.state}</p>
             </div>
           </div>
@@ -23,7 +23,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-base font-bold">Links rápidos</h2>
+          <h2 className="font-heading text-base font-bold">Links rápidos</h2>
           <div className="mt-4 grid gap-3">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="text-sm text-blue-50 transition hover:text-white">
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-base font-bold">Serviços</h2>
+          <h2 className="font-heading text-base font-bold">Serviços</h2>
           <div className="mt-4 grid gap-3">
             {services.slice(0, 6).map((service) => (
               <span key={service.title} className="text-sm text-blue-50">
@@ -45,7 +45,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-base font-bold">Contato</h2>
+          <h2 className="font-heading text-base font-bold">Contato</h2>
           <div className="mt-4 grid gap-3 text-sm text-blue-50">
             <a href={company.instagramUrl} className="flex items-center gap-2 transition hover:text-white">
               <Instagram size={17} />

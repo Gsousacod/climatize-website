@@ -49,9 +49,9 @@ export function Header() {
               priority
             />
           </span>
-          <span className="hidden text-sm font-bold leading-tight text-slate-950 sm:block">
+          <span className="hidden font-heading text-sm font-bold leading-tight text-slate-950 sm:block">
             Climatize
-            <span className="block text-xs font-medium text-climatize-gray">
+            <span className="block font-sans text-xs font-medium text-climatize-gray">
               Soluções em Ar Condicionado
             </span>
           </span>

@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
+import { Inter, Sora } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { company } from "@/data/company";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { StructuredData } from "@/components/StructuredData";
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-heading",
+  display: "swap"
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.climatize.com.br"),
@@ -51,8 +65,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <body className="antialiased">
+    <html lang="pt-BR" className={`${sora.variable} ${inter.variable}`}>
+      <body className="font-sans antialiased">
         <StructuredData />
         {children}
         <FloatingWhatsApp />

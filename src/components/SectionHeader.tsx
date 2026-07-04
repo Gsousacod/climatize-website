@@ -14,7 +14,7 @@ export function SectionHeader({ eyebrow, title, description, align = "left", lig
           {eyebrow}
         </p>
       ) : null}
-      <h2 className={`text-balance text-3xl font-bold sm:text-4xl ${light ? "text-white" : "text-slate-950"}`}>{title}</h2>
+      <h2 className={`text-balance font-heading text-3xl font-bold sm:text-4xl ${light ? "text-white" : "text-slate-950"}`}>{title}</h2>
       {description ? <p className={`mt-5 text-lg leading-8 ${light ? "text-blue-50" : "text-slate-600"}`}>{description}</p> : null}
     </div>
   );

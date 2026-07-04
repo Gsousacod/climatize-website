@@ -16,14 +16,26 @@ export function Services() {
           align="center"
         />
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewport} className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
+            const isAccent = index % 4 === 1;
             return (
-              <motion.article key={service.title} variants={fadeUp} whileHover={{ y: -8 }} className="group rounded-md border border-white bg-white p-6 shadow-soft transition">
-                <span className="mb-6 flex h-12 w-12 items-center justify-center rounded-md bg-climatize-lightBlue text-climatize-blue transition group-hover:bg-climatize-blue group-hover:text-white">
+              <motion.article
+                key={service.title}
+                variants={fadeUp}
+                whileHover={{ y: -8 }}
+                className="group rounded-2xl border border-slate-100 bg-white p-6 transition hover:shadow-premium"
+              >
+                <span
+                  className={`mb-6 flex h-12 w-12 items-center justify-center rounded-xl transition ${
+                    isAccent
+                      ? "bg-climatize-accentLight text-climatize-accentDark group-hover:bg-climatize-accent group-hover:text-white"
+                      : "bg-climatize-lightBlue text-climatize-blue group-hover:bg-climatize-blue group-hover:text-white"
+                  }`}
+                >
                   <Icon size={25} />
                 </span>
-                <h3 className="text-lg font-bold leading-snug text-slate-950">{service.title}</h3>
+                <h3 className="font-heading text-lg font-bold leading-snug text-slate-950">{service.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-slate-600">{service.description}</p>
               </motion.article>
             );

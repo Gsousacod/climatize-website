@@ -4,9 +4,9 @@ import { company } from "@/data/company";
 export function CTA() {
   return (
     <section className="bg-climatize-softGray px-5 py-20">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-md bg-gradient-to-br from-climatize-darkBlue to-climatize-blue px-6 py-14 text-center shadow-premium sm:px-10">
+      <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-climatize-darkBlue to-climatize-blue px-6 py-14 text-center shadow-premium sm:px-10">
         <MessageCircle className="mx-auto mb-5 text-white" size={38} />
-        <h2 className="text-balance text-3xl font-bold text-white sm:text-4xl">Sua empresa precisa de um plano de climatização confiável?</h2>
+        <h2 className="text-balance font-heading text-3xl font-bold text-white sm:text-4xl">Sua empresa precisa de um plano de climatização confiável?</h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-50">
           Fale com a Climatize e solicite uma proposta personalizada para manutenção, instalação, higienização ou PMOC.
         </p>
