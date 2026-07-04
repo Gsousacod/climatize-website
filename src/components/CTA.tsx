@@ -10,7 +10,7 @@ export function CTA() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-50">
           Fale com a Climatize e solicite uma proposta personalizada para manutenção, instalação, higienização ou PMOC.
         </p>
-        <a href={company.whatsappUrl} className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-bold text-climatize-darkBlue shadow-soft transition hover:-translate-y-0.5">
+        <a href={company.whatsappUrl} className="mt-8 flex w-full items-center justify-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-bold text-climatize-darkBlue shadow-soft transition hover:-translate-y-0.5 sm:inline-flex sm:w-auto">
           Solicitar orçamento pelo WhatsApp
           <ArrowRight size={18} />
         </a>

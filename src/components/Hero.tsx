@@ -34,7 +34,7 @@ export function Hero() {
           </motion.div>
           <motion.h1
             variants={fadeUp}
-            className="text-balance font-heading text-4xl font-bold leading-tight text-slate-950 sm:text-5xl lg:text-[2.65rem]"
+            className="text-balance font-heading text-3xl font-bold leading-tight text-slate-950 sm:text-4xl md:text-5xl lg:text-[2.65rem]"
           >
             Climatização profissional para empresas que valorizam{" "}
             <span className="text-climatize-blue">conforto</span>,{" "}
@@ -70,7 +70,7 @@ export function Hero() {
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-semibold text-slate-500"
+            className="mt-10 flex flex-wrap gap-x-5 gap-y-3 text-xs font-semibold text-slate-500 sm:gap-x-8 sm:text-sm"
           >
             {["Manutenção preventiva e corretiva", "Instalação e higienização", "PMOC completo"].map((item) => (
               <span key={item} className="flex items-center gap-2">
@@ -95,6 +95,7 @@ export function Hero() {
                 alt="Técnico da Climatize realizando manutenção em unidade de ar condicionado"
                 width={900}
                 height={1000}
+                sizes="(min-width: 1024px) 480px, (min-width: 640px) 70vw, 90vw"
                 className="h-[360px] w-full object-cover sm:h-[440px] lg:h-[520px]"
                 priority
               />

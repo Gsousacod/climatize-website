@@ -24,6 +24,7 @@ export function About() {
               alt="Técnico da Climatize inspecionando unidade de ar condicionado"
               width={720}
               height={860}
+              sizes="(min-width: 1024px) 420px, 90vw"
               className="aspect-[5/6] w-full rounded-2xl object-cover shadow-soft"
             />
           </motion.div>
