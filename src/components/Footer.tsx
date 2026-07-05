@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-14 w-14 items-center justify-center rounded-md bg-white p-2">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white p-2">
               <Image
                 src={company.logo}
                 alt="Logo da Climatize Soluções em Ar Condicionado"
