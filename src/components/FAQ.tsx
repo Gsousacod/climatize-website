@@ -6,21 +6,31 @@ import { useState } from "react";
 import { faq } from "@/data/faq";
 import { SectionHeader } from "./SectionHeader";
 
-export function FAQ() {
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+type FAQProps = {
+  items?: readonly FAQItem[];
+  title?: string;
+};
+
+export function FAQ({ items = faq, title = "Perguntas frequentes sobre climatização e manutenção de ar-condicionado" }: FAQProps) {
   const [active, setActive] = useState<number | null>(0);
 
   return (
     <section className="bg-climatize-softGray py-24">
       <div className="mx-auto max-w-4xl px-5 lg:px-8">
-        <SectionHeader eyebrow="FAQ" title="Perguntas frequentes sobre climatização e manutenção de ar-condicionado" align="center" />
+        <SectionHeader eyebrow="FAQ" title={title} align="center" />
         <div className="mt-12 grid gap-3">
-          {faq.map((item, index) => {
+          {items.map((item, index) => {
             const isOpen = active === index;
             const buttonId = `faq-button-${index}`;
             const panelId = `faq-panel-${index}`;
 
             return (
-              <div key={item.question} className="rounded-md border border-slate-100 bg-white shadow-soft">
+              <div key={item.question} className="rounded-xl border border-slate-100 bg-white shadow-soft">
                 <button
                   id={buttonId}
                   type="button"

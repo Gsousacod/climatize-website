@@ -25,7 +25,7 @@ export function ContactForm() {
           <SectionHeader
             eyebrow="Contato"
             title="Solicite uma avaliação técnica"
-            description="Envie sua necessidade de manutenção, instalação, higienização ou PMOC. O formulário está organizado para futura integração com backend."
+            description="Envie sua necessidade de manutenção, instalação, higienização ou PMOC e nossa equipe entra em contato para entender a demanda da sua empresa."
           />
           <div className="mt-8 rounded-2xl bg-climatize-lightBlue p-6">
             <p className="font-heading font-bold text-slate-950">Atendimento em {company.city} - {company.state}</p>

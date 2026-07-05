@@ -1,33 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Briefcase,
-  Building,
-  Building2,
-  Landmark,
-  Stethoscope,
-  Store,
-  type LucideIcon
-} from "lucide-react";
 import { segments } from "@/data/differentials";
 import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
+import { getSegmentIcon } from "@/lib/segment-icons";
 import { SectionHeader } from "./SectionHeader";
-
-const segmentIcons: Record<string, LucideIcon> = {
-  Clínicas: Stethoscope,
-  Hospitais: Stethoscope,
-  Hotéis: Building,
-  Comércios: Store,
-  Escritórios: Briefcase,
-  Empresas: Building2,
-  Instituições: Landmark,
-  "Ambientes corporativos": Building2
-};
 
 export function SocialProof() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-climatize-softGray py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeader
           eyebrow="Segmentos atendidos"
@@ -37,9 +18,9 @@ export function SocialProof() {
         />
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewport} className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {segments.map((segment) => {
-            const Icon = segmentIcons[segment] ?? Building2;
+            const Icon = getSegmentIcon(segment);
             return (
-              <motion.div key={segment} variants={fadeUp} className="flex items-center gap-3 rounded-xl border border-slate-100 bg-climatize-softGray p-5">
+              <motion.div key={segment} variants={fadeUp} className="flex items-center gap-3 rounded-xl border border-slate-100 bg-white p-5">
                 <Icon className="text-climatize-blue" size={23} />
                 <span className="font-bold text-slate-800">{segment}</span>
               </motion.div>

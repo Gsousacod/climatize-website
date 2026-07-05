@@ -3,29 +3,36 @@ import { Inter, Sora } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { company } from "@/data/company";
+import { AnalyticsLoader } from "@/components/cookies/AnalyticsLoader";
+import { CookieConsentBanner } from "@/components/cookies/CookieConsentBanner";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { StructuredData } from "@/components/StructuredData";
 
 const sora = Sora({
   subsets: ["latin"],
   weight: ["600", "700", "800"],
   variable: "--font-heading",
-  display: "swap"
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
-  display: "swap"
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.climatize.com.br"),
-  title: "Climatize Soluções em Ar Condicionado | Manutenção, PMOC e Climatização em Teófilo Otoni - MG",
-  description: "A Climatize Soluções em Ar Condicionado oferece manutenção preventiva e corretiva, instalação, higienização e PMOC para empresas, clínicas, hospitais, hotéis e comércios em Teófilo Otoni e região.",
+  title: "Climatize Soluções em Ar Condicionado em Teófilo Otoni",
+  description:
+    "Manutenção, instalação, higienização e PMOC de ar-condicionado para empresas, clínicas, hospitais e hotéis em Teófilo Otoni, Vale do Jequitinhonha e Vale do Mucuri.",
   keywords: [
     "ar-condicionado em Teófilo Otoni",
     "empresa de ar-condicionado em Teófilo Otoni",
+    "climatização no Vale do Jequitinhonha",
+    "climatização no Vale do Mucuri",
     "manutenção de ar-condicionado",
     "manutenção preventiva de ar-condicionado",
     "manutenção corretiva de ar-condicionado",
@@ -41,35 +48,48 @@ export const metadata: Metadata = {
     "climatização para hotéis",
     "qualidade do ar",
     "manutenção de climatização",
-    "suporte técnico em ar-condicionado"
+    "suporte técnico em ar-condicionado",
   ],
   openGraph: {
-    title: "Climatize Soluções em Ar Condicionado",
-    description: "Manutenção, instalação, higienização e PMOC para empresas em Teófilo Otoni e região.",
+    title: "Climatize Soluções em Ar Condicionado em Teófilo Otoni",
+    description:
+      "Manutenção, instalação, higienização e PMOC para empresas em Teófilo Otoni, Vale do Jequitinhonha e Vale do Mucuri.",
     url: "https://www.climatize.com.br",
     siteName: company.name,
     locale: "pt_BR",
     type: "website",
-    images: [{ url: company.logo, width: 1200, height: 630, alt: "Logo da Climatize Soluções em Ar Condicionado" }]
+    images: [
+      {
+        url: company.logo,
+        width: 1200,
+        height: 630,
+        alt: "Logo da Climatize Soluções em Ar Condicionado",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Climatize Soluções em Ar Condicionado",
-    description: "Soluções profissionais em climatização, manutenção, instalação, higienização e PMOC.",
-    images: [company.logo]
+    title: "Climatize Soluções em Ar Condicionado em Teófilo Otoni",
+    description:
+      "Soluções profissionais em climatização, manutenção, instalação, higienização e PMOC.",
+    images: [company.logo],
   },
   icons: {
-    icon: company.logo
-  }
+    icon: company.logo,
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${sora.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
+        <AnalyticsLoader />
         <StructuredData />
+        <Header />
         {children}
+        <Footer />
         <FloatingWhatsApp />
+        <CookieConsentBanner />
       </body>
     </html>
   );

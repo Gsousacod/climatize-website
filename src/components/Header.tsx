@@ -8,11 +8,14 @@ import {
 } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { company, navItems } from "@/data/company";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const { scrollY } = useScroll();
   const background = useTransform(
     scrollY,
@@ -34,8 +37,8 @@ export function Header() {
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8"
         aria-label="Navegação principal"
       >
-        <a
-          href="#inicio"
+        <Link
+          href="/"
           className="flex items-center gap-3"
           aria-label="Ir para o início"
         >
@@ -55,23 +58,31 @@ export function Header() {
               Soluções em Ar Condicionado
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-semibold text-slate-700 transition hover:text-climatize-blue"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const active =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm font-semibold transition ${active ? "text-climatize-blue" : "text-slate-700 hover:text-climatize-blue"}`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={company.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-md bg-climatize-blue px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-climatize-darkBlue"
           >
             Solicitar orçamento
@@ -98,18 +109,26 @@ export function Header() {
             className="border-t border-slate-100 bg-white px-5 py-4 shadow-soft lg:hidden"
           >
             <div className="mx-auto grid max-w-7xl gap-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-md px-3 py-3 text-sm font-semibold text-slate-700 hover:bg-climatize-lightBlue hover:text-climatize-darkBlue"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const active =
+                  item.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={`rounded-md px-3 py-3 text-sm font-semibold ${active ? "bg-climatize-lightBlue text-climatize-darkBlue" : "text-slate-700 hover:bg-climatize-lightBlue hover:text-climatize-darkBlue"}`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <a
                 href={company.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 rounded-md bg-climatize-blue px-4 py-3 text-center text-sm font-bold text-white"
               >
                 Solicitar orçamento

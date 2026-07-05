@@ -3,28 +3,21 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ShieldCheck, Wind } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { company } from "@/data/company";
 import { fadeUp } from "@/lib/animations";
 
-export function Hero() {
+export function HomeHero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 600], [0, 40]);
 
   return (
-    <section
-      id="inicio"
-      className="relative isolate overflow-hidden bg-air-flow pt-28"
-    >
+    <section id="inicio" className="relative isolate overflow-hidden bg-air-flow pt-28">
       <div className="air-line absolute left-0 top-40 h-px w-full rotate-[-3deg]" />
       <div className="air-line absolute bottom-24 left-0 h-px w-full rotate-[4deg]" />
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 lg:min-h-[720px] lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          transition={{ staggerChildren: 0.12 }}
-          className="relative z-10"
-        >
+        <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.12 }} className="relative z-10">
           <motion.div
             variants={fadeUp}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-climatize-blue/15 bg-white/80 px-4 py-2 text-sm font-semibold text-climatize-darkBlue shadow-soft backdrop-blur"
@@ -41,37 +34,27 @@ export function Hero() {
             <span className="text-climatize-blue">segurança</span> e{" "}
             <span className="text-climatize-blue">qualidade do ar</span>.
           </motion.h1>
-          <motion.p
-            variants={fadeUp}
-            className="mt-6 max-w-2xl text-lg leading-8 text-slate-600"
-          >
-            A Climatize Soluções em Ar Condicionado oferece manutenção
-            preventiva e corretiva, instalação, higienização e PMOC para
-            empresas, clínicas, hospitais, hotéis e comércios que precisam de
-            ambientes mais seguros, eficientes e bem climatizados.
+          <motion.p variants={fadeUp} className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Manutenção, instalação, higienização e PMOC para empresas, clínicas, hospitais, hotéis e comércios.
           </motion.p>
-          <motion.div
-            variants={fadeUp}
-            className="mt-9 flex flex-col gap-3 sm:flex-row"
-          >
+          <motion.div variants={fadeUp} className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href={company.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-climatize-blue px-6 py-4 text-sm font-bold text-white shadow-premium transition hover:-translate-y-0.5 hover:bg-climatize-darkBlue"
             >
-              Solicitar orçamento pelo WhatsApp
+              Solicitar orçamento
               <ArrowRight size={18} />
             </a>
-            <a
-              href="#servicos"
+            <Link
+              href="/servicos"
               className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-6 py-4 text-sm font-bold text-climatize-darkBlue shadow-soft transition hover:-translate-y-0.5 hover:border-climatize-blue/40"
             >
               Conhecer serviços
-            </a>
+            </Link>
           </motion.div>
-          <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-wrap gap-x-5 gap-y-3 text-xs font-semibold text-slate-500 sm:gap-x-8 sm:text-sm"
-          >
+          <motion.div variants={fadeUp} className="mt-10 flex flex-wrap gap-x-5 gap-y-3 text-xs font-semibold text-slate-500 sm:gap-x-8 sm:text-sm">
             {["Manutenção preventiva e corretiva", "Instalação e higienização", "PMOC completo"].map((item) => (
               <span key={item} className="flex items-center gap-2">
                 <ShieldCheck size={16} className="text-climatize-blue" />

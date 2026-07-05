@@ -13,7 +13,7 @@ export function StructuredData() {
       addressRegion: company.state,
       addressCountry: "BR"
     },
-    areaServed: "Teófilo Otoni e região",
+    areaServed: company.regions,
     sameAs: [company.instagramUrl],
     image: company.logo,
     logo: company.logo,
