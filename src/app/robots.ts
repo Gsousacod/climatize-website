@@ -4,8 +4,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/"
+      allow: "/",
     },
-    sitemap: "https://www.climatize.com.br/sitemap.xml"
+    sitemap: "https://www.climatizeto.com.br/sitemap.xml",
   };
 }

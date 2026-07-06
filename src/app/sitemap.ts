@@ -2,12 +2,12 @@ import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.climatize.com.br";
+  const baseUrl = "https://www.climatizeto.com.br/";
   const serviceRoutes = services.map((service) => ({
     url: `${baseUrl}${service.href}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: 0.75
+    priority: 0.75,
   }));
 
   return [
@@ -15,26 +15,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 1
+      priority: 1,
     },
     {
       url: `${baseUrl}/sobre`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/servicos`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/contato`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.85
+      priority: 0.85,
     },
-    ...serviceRoutes
+    ...serviceRoutes,
   ];
 }
