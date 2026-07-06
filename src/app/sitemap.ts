@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.climatizeto.com.br/";
+  const baseUrl = "https://www.climatizeto.com.br";
   const serviceRoutes = services.map((service) => ({
     url: `${baseUrl}${service.href}`,
     lastModified: new Date(),
