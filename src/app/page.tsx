@@ -14,12 +14,14 @@ import { services } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Climatize Soluções em Ar Condicionado em Teófilo Otoni",
-  description: "Manutenção, instalação, higienização e PMOC de ar-condicionado para empresas, clínicas, hospitais e hotéis em Teófilo Otoni, Vale do Jequitinhonha e Vale do Mucuri.",
+  description:
+    "Manutenção, instalação, higienização e PMOC de ar-condicionado para empresas, clínicas, hospitais e hotéis em Teófilo Otoni, Vale do Jequitinhonha e Vale do Mucuri.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Climatize Soluções em Ar Condicionado em Teófilo Otoni",
-    description: "Manutenção preventiva e corretiva, instalação, higienização e PMOC para empresas e instituições em Teófilo Otoni e região."
-  }
+    description:
+      "Manutenção preventiva e corretiva, instalação, higienização e PMOC para empresas e instituições em Teófilo Otoni e região.",
+  },
 };
 
 export default function Home() {
@@ -28,7 +30,6 @@ export default function Home() {
   return (
     <main>
       <HomeHero />
-
       <section className="bg-white py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
           <div className="relative mx-auto w-full max-w-md lg:order-2">
@@ -50,9 +51,13 @@ export default function Home() {
             />
             <div className="mt-8 rounded-2xl bg-climatize-lightBlue p-8">
               <p className="text-lg leading-8 text-slate-700">
-                Atuamos com foco em empresas e instituições que precisam de ambientes confortáveis, seguros e bem acompanhados tecnicamente.
+                Atuamos com foco em empresas e instituições que precisam de
+                ambientes confortáveis, seguros e bem acompanhados tecnicamente.
               </p>
-              <Link href="/sobre" className="mt-6 inline-flex items-center gap-2 rounded-md bg-climatize-blue px-5 py-3 text-sm font-bold text-white transition hover:bg-climatize-darkBlue">
+              <Link
+                href="/sobre"
+                className="mt-6 inline-flex items-center gap-2 rounded-md bg-climatize-blue px-5 py-3 text-sm font-bold text-white transition hover:bg-climatize-darkBlue"
+              >
                 Saiba mais sobre a Climatize
                 <ArrowRight size={17} />
               </Link>
@@ -60,27 +65,33 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="bg-climatize-softGray py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <SectionHeader eyebrow="Serviços" title="Nossos principais serviços" description="Soluções essenciais para manter a climatização da sua empresa organizada, eficiente e segura." align="center" />
+          <SectionHeader
+            eyebrow="Serviços"
+            title="Nossos principais serviços"
+            description="Soluções essenciais para manter a climatização da sua empresa organizada, eficiente e segura."
+            align="center"
+          />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {featuredServices.map((service) => (
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link href="/servicos" className="inline-flex items-center gap-2 rounded-md bg-climatize-blue px-6 py-4 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-climatize-darkBlue">
+            <Link
+              href="/servicos"
+              className="inline-flex items-center gap-2 rounded-md bg-climatize-blue px-6 py-4 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-climatize-darkBlue"
+            >
               Ver todos os serviços
               <ArrowRight size={17} />
             </Link>
           </div>
         </div>
       </section>
-
       <ClimatizeTools />
-      <ClientsGrid />
-      <SocialProof />
+      {/* <ClientsGrid /> */}
+      <SocialProof />s
       <Differentials />
       <CTA
         title="Precisa de manutenção, instalação, higienização ou PMOC?"
