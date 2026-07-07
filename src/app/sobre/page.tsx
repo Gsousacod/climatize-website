@@ -41,7 +41,7 @@ export default function SobrePage() {
           <SectionHeader
             eyebrow="História"
             title="Conhecimento técnico, compromisso e atenção à qualidade do ar"
-            description="A Climatize Soluções em Ar Condicionado nasceu com o propósito de oferecer soluções completas em climatização para empresas, comércios e instituições. Nosso trabalho une conhecimento técnico, compromisso com o cliente e atenção à qualidade do ar em cada ambiente atendido."
+            description="Nossa empresa nasceu com o propósito de oferecer soluções completas em climatização para empresas, comércios e instituições. Nosso trabalho une conhecimento técnico, compromisso com o cliente e atenção à qualidade do ar em cada ambiente atendido."
           />
         </div>
       </section>

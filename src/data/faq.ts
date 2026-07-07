@@ -13,7 +13,7 @@ export const faq = [
   },
   {
     question: "A Climatize atende empresas?",
-    answer: "Sim. A Climatize Soluções em Ar Condicionado atende empresas, comércios, clínicas, hospitais, hotéis, escritórios e instituições que precisam de soluções profissionais em climatização."
+    answer: "Sim. Atendemos empresas, comércios, clínicas, hospitais, hotéis, escritórios e instituições que precisam de soluções profissionais em climatização."
   },
   {
     question: "A Climatize faz manutenção em clínicas, hospitais e hotéis?",
@@ -25,6 +25,6 @@ export const faq = [
   },
   {
     question: "A empresa atende em Teófilo Otoni e região?",
-    answer: "Sim. A Climatize Soluções em Ar Condicionado atua em Teófilo Otoni, Minas Gerais, e pode atender demandas em cidades da região conforme necessidade do cliente."
+    answer: "Sim. Nossa empresa atua em Teófilo Otoni, Minas Gerais, e pode atender demandas em cidades da região conforme necessidade do cliente."
   }
 ];

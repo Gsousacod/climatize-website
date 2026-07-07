@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { ClientsGrid } from "@/components/ClientsGrid";
 import { CTA } from "@/components/CTA";
 import { Differentials } from "@/components/Differentials";
+import { GoogleReviews } from "@/components/GoogleReviews";
 import { HomeHero } from "@/components/HomeHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -47,7 +48,7 @@ export default function Home() {
             <SectionHeader
               eyebrow="Quem somos"
               title="Soluções completas em climatização"
-              description="A Climatize Soluções em Ar Condicionado une conhecimento técnico, organização e responsabilidade para entregar serviços confiáveis em climatização empresarial e comercial."
+              description="Nossa empresa une conhecimento técnico, organização e responsabilidade para entregar serviços confiáveis em climatização empresarial e comercial."
             />
             <div className="mt-8 rounded-2xl bg-climatize-lightBlue p-8">
               <p className="text-lg leading-8 text-slate-700">
@@ -91,7 +92,8 @@ export default function Home() {
       </section>
       <ClimatizeTools />
       {/* <ClientsGrid /> */}
-      <SocialProof />s
+      <GoogleReviews />
+      <SocialProof />
       <Differentials />
       <CTA
         title="Precisa de manutenção, instalação, higienização ou PMOC?"

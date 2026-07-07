@@ -13,7 +13,7 @@ export function SocialProof() {
         <SectionHeader
           eyebrow="Segmentos atendidos"
           title="Empresas e instituições que precisam de climatização confiável"
-          description="A Climatize atende demandas de climatização em ambientes que exigem organização, segurança, conforto térmico e qualidade do ar."
+          description="Nossa empresa atende demandas de climatização em ambientes que exigem organização, segurança, conforto térmico e qualidade do ar."
           align="center"
         />
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewport} className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

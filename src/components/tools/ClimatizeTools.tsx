@@ -29,7 +29,7 @@ export function ClimatizeTools() {
           align="center"
         />
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-7 text-slate-600">
-          A Climatize oferece ferramentas rápidas para ajudar você a entender melhor sua necessidade em climatização, manutenção de
+          Oferecemos ferramentas rápidas para ajudar você a entender melhor sua necessidade em climatização, manutenção de
           ar-condicionado, instalação, higienização e PMOC em Teófilo Otoni e região.
         </p>
 

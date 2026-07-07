@@ -24,7 +24,7 @@ export function Differentials() {
           <SectionHeader
             eyebrow="Diferenciais"
             title="Por que escolher a Climatize?"
-            description="Empresas precisam de climatização confiável, atendimento organizado e soluções técnicas que tragam segurança para a operação. A Climatize une cuidado, responsabilidade e conhecimento técnico para entregar um serviço de qualidade."
+            description="Empresas precisam de climatização confiável, atendimento organizado e soluções técnicas que tragam segurança para a operação. Nossa empresa une cuidado, responsabilidade e conhecimento técnico para entregar um serviço de qualidade."
             light
           />
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewport} className="grid gap-4 sm:grid-cols-2">
